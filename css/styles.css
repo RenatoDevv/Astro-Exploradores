@@ -39,12 +39,27 @@ body {
 }
 
 .video-section header {
-    margin-top: 10px;
+    width: 100%;
     margin-bottom: 130px;
     top: 0;
     
 }
-
+.video-section header .reserve {
+    background: #18b8e05b;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.875rem;
+    margin-bottom: 5px;
+}
+.video-section header .reserve .link-reserva {
+    background: #cc7a00;
+    padding: 5px 20px;
+    color: #fff;
+}
+.video-section header .reserve .link-reserva:hover {
+    opacity: .8;
+}
 .video-section header nav {
     width: 100%;
     display: flex;
@@ -64,6 +79,7 @@ body {
 
 .video-section header nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     gap: 20px;
 }
@@ -95,7 +111,7 @@ body {
 
 .video-section .link-game {
     text-decoration: none;
-    background: #14bde7;
+    background: #0b7e9b;
     border-radius: 15px;
     padding: 10px 30px;
     font-weight: bold;
