@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --font-family: monospace;
     --primary-color: #fff;
     --secondary-color: #18b8e0;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -42,8 +44,9 @@ body {
     width: 100%;
     margin-bottom: 130px;
     top: 0;
-    
+
 }
+
 .video-section header .reserve {
     background: #18b8e05b;
     display: flex;
@@ -52,14 +55,17 @@ body {
     gap: 1.875rem;
     margin-bottom: 5px;
 }
+
 .video-section header .reserve .link-reserva {
     background: #cc7a00;
     padding: 5px 20px;
     color: #fff;
 }
+
 .video-section header .reserve .link-reserva:hover {
     opacity: .8;
 }
+
 .video-section header nav {
     width: 100%;
     display: flex;
@@ -104,7 +110,7 @@ body {
 }
 
 .video-section p {
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     margin: 0;
 }
@@ -123,6 +129,16 @@ body {
 
 .video-section .link-game:hover {
     opacity: .8;
+}
+
+.destino-section {
+    background: #0b7e9b;
+}
+
+.destino-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .game-section {
@@ -169,12 +185,14 @@ body {
         transform: translateY(-10vh) scale(1);
     }
 }
+
 .section-game {
     padding: 30px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .section-game .ArrowFloat {
     display: flex;
     justify-content: center;
@@ -210,6 +228,7 @@ body {
         /* Sube 10 píxeles en el punto medio de la animación */
     }
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -222,6 +241,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .barra {
     width: 300px;
     height: 100px;
@@ -231,6 +251,7 @@ body {
     border-radius: 15px;
     padding: 20px;
 }
+
 .boton {
     background: #18b8e0;
     padding: 10px 20px;
@@ -243,22 +264,49 @@ body {
     opacity: .8;
     box-shadow: 0 0 3px 5px #f713ff5d;
 }
-
-  @media screen and (min-width: 1300px) {
+footer {
+    width: 100%;
+    background: #001e55;
+    padding: 10px 100px;
+}
+footer .footer-container {
+    gap: 150px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
     .video-section h1 {
         font-size: 60px;
     }
+
     .video-section p {
         font-size: 30px;
     }
 }
+
 @media screen and (max-width: 500px) {
     .video-section {
         height: auto;
     }
+
+    .video-section header {
+        background: #998181;
+    }
+
+    .video-section header nav {
+        display: none;
+    }
+
+    .video-section header .reserve {
+        background: #2bdf14;
+        flex-direction: column;
+        align-items: center;
+        gap: .3125rem;
+    }
+
     .video-section h1 {
         font-size: 40px;
     }
+
     .video-section p {
         font-size: 20px;
     }
