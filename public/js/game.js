@@ -2,7 +2,6 @@
 function initCanvas() {
     var canvas = document.getElementById("my_canvas");
     var ctx = canvas.getContext("2d");
-    //var backgroundImage = new Image();
     var naveImage = new Image();
     var tierra = new Image();
     var saturno = new Image();
@@ -282,7 +281,7 @@ function initCanvas() {
 
         // Agregar el formulario con estilos de Bootstrap
         formCell.innerHTML = `
-            <form class="p-3">
+            <form class="p-3" id="explorationForm">
                 <div class="mb-2">
                     <label for="fechaHora" class="form-label"><strong>Fecha y Hora</strong></label>
                     <input type="datetime-local" class="form-control" id="fechaHora" name="fechaHora" required>
@@ -315,9 +314,10 @@ function initCanvas() {
                     <label for="comunicaciones" class="form-label"><strong>Comunicaciones</strong></label>
                     <textarea class="form-control" id="comunicaciones" name="comunicaciones" rows="3" placeholder="Comunicaciones"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Realizar Viaje</button>
+                <button type="submit" class="btn btn-primary">Separar Viaje</button>
             </form>
         `;
+
         descriptionCell.colSpan = 2; // Para ocupar el ancho completo de la tabla
         // Agregar la descripción estilo Lonely Planet
         descriptionCell.innerHTML += `${planet.description}`;
@@ -370,11 +370,22 @@ function initCanvas() {
         `;
         document.head.appendChild(labelStyles);
         // Limpiar el contenido del contenedor de la ventana modal
-        document.getElementById("modal-content").innerHTML = "";
+        document.getElementById("modal-content").innerHTML = ""
 
         // Agregar el contenedor al cuerpo del documento
         document.getElementById("modal-content").appendChild(container);
+
+        // Obtener el formulario después de agregarlo al DOM
+        var explorationForm = document.getElementById("explorationForm");
+
+        // Evento submit para el formulario
+        explorationForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Resto del código del evento submit...
+            swal("¡Exito!", "Has realizado con éxito tu formulario!", "success");
+        });
     }
+
 
     function returnToEarth() {
         // Realizar otras acciones necesarias al regresar a la Tierra
